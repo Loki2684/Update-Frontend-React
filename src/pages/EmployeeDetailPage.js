@@ -7,7 +7,6 @@ function EmployeeDetailPage() {
   const { id } = useParams();
   const emp = employees.find(e => e.id === parseInt(id));
 
-  // ✅ Use default value (false) if emp is not found
   const [present, setPresent] = useState(emp?.present ?? false);
 
   if (!emp) {
